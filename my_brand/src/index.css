@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: Blacksmoke ;
+    src: url('/src/assets/Fonts/Blacksmoke/Blacksmoke.ttf');
+}
+@font-face {
+    font-family: Carnage;
+    src: url('/src/assets/Fonts/carnage/Carnage.ttf');
+}
+
+@font-face {
+    font-family: Gematype;
+    src: url('/src/assets/Fonts/Gematype-Font/Gematype.ttf');
+}
+
+@font-face {
+    font-family: Oxanium;
+    src: url('/src/assets/Fonts/Oxanium/static/Oxanium-Light.ttf');
+}
+
+@font-face {
+    font-family: Antic;
+    src: url('/src/assets/Fonts/Antic/Antic-Regular.ttf');
+}
+@font-face {
+    font-family: Averia;
+    src: url('/src/assets/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf');
+}

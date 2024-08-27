@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from '../components/Header';
+import CallToAction from '../components/CallToAction';
+import Hero from '../Sections/Hero';
 
 const HomePage = () => {
     return (
         <>
     <Header/>
-    <div className='w-[94%] m-auto'>
-        <h1 className=''>SENGA EMMY</h1>
-    </div>
+    <Hero />
     <div>Services</div>
     <div>Work</div>
     <div>About</div>

@@ -7,9 +7,29 @@ export default {
   theme: {
     extend: {
       colors: {
-        "dark": "#333333"
+        dark: {
+          700: "#333333",
+          800: "#0C0C0C"
+        }
+      }
+      ,
+      fontFamily: {
+        'blacksmoke': ['Blacksmoke'],
+        'carnage': ['Carnage'],
+        'gematype': ['Gematype'],
+        'oxanium': ['Oxanium'],
+        'antic': ['Antic'],
+        'averia': ['Averia']
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("@designbycode/tailwindcss-text-shadow")
+    ({
+      shadowColor: "rgba(0, 0, 0, 3.5)",
+      shadowBlur: "2px",
+      shadowOffsetX: "4px",
+      shadowOffsetY: "4px",
+    })
+  ],
 }

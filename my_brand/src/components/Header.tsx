@@ -2,7 +2,7 @@ import Logo from "./Logo";
 
 const Header = () => {
     return (
-        <header className='bg-dark sticky top-0 z-[20] mx-auto flex w-full p-0 text-gray-400 '>
+        <header className='bg-dark-700 sticky top-0 z-[20] mx-auto flex w-full p-0 text-gray-400 '>
             <div className="flex m-auto w-[94%] items-center justify-between">
         <Logo/>
         <div className="hidden sm:flex border-solid border w-[60%]">
