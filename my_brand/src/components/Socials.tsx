@@ -5,7 +5,7 @@ import { faDiscord, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-
 
 const Socials = () => {
     return (
-        <div className='ml-4'>
+        <div className='sm:ml-40 sm:mt-60 ml-4'>
             <h4>SOCIALS</h4>
             <ul className='ml-8 leading-7'>
                 <li><FontAwesomeIcon icon={faGithub}/> Github</li>
