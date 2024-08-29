@@ -21,6 +21,10 @@
     font-family: Oxanium;
     src: url('/src/assets/Fonts/Oxanium/static/Oxanium-Light.ttf');
 }
+@font-face {
+    font-family: OxaniumThin;
+    src: url('/src/assets/Fonts/Oxanium/static/Oxanium-ExtraLight.ttf');
+}
 
 @font-face {
     font-family: Antic;

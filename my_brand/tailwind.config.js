@@ -18,6 +18,7 @@ export default {
         'carnage': ['Carnage'],
         'gematype': ['Gematype'],
         'oxanium': ['Oxanium'],
+        'oxanium-thin': ['OxaniumThin'],
         'antic': ['Antic'],
         'averia': ['Averia']
       }
