@@ -11,7 +11,9 @@ const Hero = () => {
     <div className="sm:flex sm:mt-40 mt-6">
     <CallToAction/>
     <div className="flex">
+        <div className="sm:h-[420px] hover:z-50 sm:w-80 sm:ml-32 h-40 w-40">
         <ImageHolder/>  
+        </div>
         <Socials />
     </div>
     </div>
