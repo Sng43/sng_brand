@@ -1,9 +1,9 @@
 const Services = () => {
     return (
         <section className="bg-gray-100 rounded-xl m-auto mt-20 text-black">
-        <div className="sm:w-[90%] w-[94%] m-auto py-4">
+        <div className="sm:w-[90%] w-[94%] m-auto py-2">
             <div className="sm:flex justify-between ">
-                <h1 className="font-antic font-extrabold text-[2.8rem] sm:text-6xl lg:text-8xl tracking-tight mt-6">WHAT I DO/</h1>
+                <h1 className="font-antic font-extrabold text-[2.8rem] sm:text-6xl lg:text-8xl tracking-tight mt-2">WHAT I DO/</h1>
                 <div className="sm:w-[43%] sm:flex justify-between items-top sm:mt-28 lg:mt-44">
                      <p className="font-antic text-gray-400 mt-2 text-lg lg:text-xl">(services)</p>   
                     <p className="mt-6 sm:mt-4 lg:mt-5 sm:ml-10 lg:ml-16 font-antic leading-[23px] text-black tracking-normal text-lg lg:text-xl lg:leading-7 lg:tracking-wider">My obsession is to craft memorable digital experiences that represent your brand, serve a meaningful purpose, and drive tangible business results.</p> 

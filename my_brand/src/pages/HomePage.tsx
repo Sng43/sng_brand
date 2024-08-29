@@ -1,8 +1,7 @@
-import React from 'react';
 import Header from '../components/Header';
-import CallToAction from '../components/CallToAction';
 import Hero from '../Sections/Hero';
 import Services from '../Sections/Services';
+import Work from '../Sections/Work';
 
 const HomePage = () => {
     return (
@@ -10,7 +9,7 @@ const HomePage = () => {
     <Header/>
     <Hero />
     <Services/>
-    <div>Work</div>
+    <Work />
     <div>About</div>
     <div>Contact</div>
     <div>footer</div>
