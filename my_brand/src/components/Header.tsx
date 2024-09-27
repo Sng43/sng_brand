@@ -2,12 +2,31 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import Logo from "./Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
+gsap.registerPlugin(useGSAP)
 
 const Header = () => {
 
     const [isOpen,setIsOpen] = useState(false)
 
+    const tl  = gsap.timeline()
+
+    useGSAP(()=>{
+        tl.from(".logo", {
+            opacity: 0,
+            duration: 1,
+            y:-30
+        })
+
+        tl.from("li", {
+            opacity: 0,
+            duration: 1,
+            y:-30,
+            stagger: 0.2 
+        })
+    }, {})
 
     const Links = [
         {name:'services', link:'/'},
@@ -20,7 +39,7 @@ const Header = () => {
         <header className='bg-dark-800 sticky top-0 z-[20] mx-auto flex w-full p-0 text-gray-400'>
             <div className="sm:w-[90%] sm:flex m-auto w-[94%] justify-between items-center">
         <div className="flex justify-between items-center sm:h-16 sm:w-16">
-        <div className="h-16 w-16">
+        <div className="logo h-16 w-16">
         <Logo/>
         </div>
             <div className="sm:hidden mr-2">
