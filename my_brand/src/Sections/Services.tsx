@@ -1,8 +1,43 @@
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import {useEffect, useRef} from 'react'
+
+
+gsap.registerPlugin(ScrollTrigger)
+
+
 const Services = () => {
+
+    const services = useRef<HTMLElement>(null)
+    
+    useEffect(()=>{
+        gsap.to(services.current, {
+            y: -300,
+            scrollTrigger: {
+                trigger: services.current,
+                start: "top 700",
+                markers: false,
+                scrub: true
+            }
+        })
+    }, [])
+
+    // useEffect(()=>{
+    //     gsap.to("#what",{
+    //         scrollTrigger: {
+    //             trigger: "#what",
+    //             start: "top top",
+    //             end: "150 bottom",
+    //             markers: true,
+    //             scrub: true
+    //         }
+    //     })
+    // }, [])
+
     return (
-        <section className="bg-gray-100 rounded-xl m-auto mt-20 text-black">
-        <div className="sm:w-[90%] w-[94%] m-auto py-2">
-            <div className="sm:flex justify-between ">
+        <section ref={services} className="bg-gray-100 rounded-xl m-auto mt-20 text-black">
+        <div id="what"  className="sm:w-[90%] w-[94%] m-auto py-2">
+            <div className="sm:flex justify-between relative">
                 <h1 className="font-antic font-extrabold text-[2.8rem] sm:text-6xl lg:text-8xl tracking-tight mt-2">WHAT I DO/</h1>
                 <div className="sm:w-[43%] sm:flex justify-between items-top sm:mt-28 lg:mt-44">
                      <p className="font-antic text-gray-400 mt-2 text-lg lg:text-xl">(services)</p>   
