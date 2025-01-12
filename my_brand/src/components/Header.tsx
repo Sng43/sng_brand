@@ -50,7 +50,9 @@ const Header = () => {
             <ul className={`sm:flex sm:justify-between sm:items-center w-full font-oxanium-thin text-center leading-[3rem] mt-10 sm:mt-0
                 ${isOpen ? 'block h-svh': 'hidden'}`}>
                 {Links.map((Link) => (
-            <li key={Link.name} className="hover:text-white">
+            <li key={Link.name}
+            onClick={() => setIsOpen(!isOpen)}
+            className="hover:text-white">
                 <a href={Link.link}>{Link.name}</a>
             </li>
                 ))}
