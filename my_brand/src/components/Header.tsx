@@ -29,11 +29,10 @@ const Header = () => {
     }, {})
 
     const Links = [
-        {name:'services', link:'/'},
-        {name:'works', link:'/'},
-        {name:'blogs', link:'/'},
-        {name:'about', link:'/'},
-        {name:'contact', link:'/'},
+        {name:'services', link:'#services'},
+        {name:'works', link:'#works'},
+        {name:'about', link:'#about'},
+        {name:'contact', link:'#contact'},
     ]
     return (
         <header className='bg-dark-800 sticky top-0 z-[20] mx-auto flex w-full p-0 text-gray-400'>
@@ -47,7 +46,7 @@ const Header = () => {
                 onClick={() => setIsOpen(!isOpen)}/>
             </div>
         </div>
-        <div className="sm:flex w-[60%] m-auto sm:m-0">
+        <div className="sm:flex w-[30%] m-auto sm:m-0">
             <ul className={`sm:flex sm:justify-between sm:items-center w-full font-oxanium-thin text-center leading-[3rem] mt-10 sm:mt-0
                 ${isOpen ? 'block h-svh': 'hidden'}`}>
                 {Links.map((Link) => (

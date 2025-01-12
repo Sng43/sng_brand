@@ -13,8 +13,8 @@ const About = () => {
                     <ImageHolder />
                     </div>
                      <div className="sm:w-[53%] sm:mt-36 sm:h-[45%] lg:w-[38%] lg:mr-28 xl:mt-52">
-                        <p className="text-center sm:text-left font-antic text-gray-400 hover:text-white text-lg xl:text-xl">
-                        When I'm not immersed in web development and design, you can find me sharing insights about my freelance journey on YouTube, bouldering, playing 
+                        <p className="text-center sm:text-left font-antic text-gray-400 hover:text-white text-lg xl:text-xl sm:mb-10">
+                        Driven by a passion for design and development, I bring projects to life from concept to launch. I ensure a smooth journey that delivers lasting value to your business and the digital landscape.
                         </p>
                         <div className="m-auto my-5 sm:mb-0 flex sm:block justify-center items-center">
                         <Button/>

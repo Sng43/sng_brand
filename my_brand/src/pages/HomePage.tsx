@@ -10,13 +10,23 @@ import ReactLenis from 'lenis/react';
 const HomePage = () => {
     return (
     <ReactLenis root>
+        <main className='h-[800x]'>
         <Header/>
+        <div id='home'>
         <Hero />
+        </div>
+        <div id='services'>
         <Services/>
+        </div>
+        <div id='works'>
         <Work />
+        </div>
         <About />
+        <div id='contact'>
         <Contact />
+        </div>
         <Footer />
+        </main>
     </ReactLenis>
     );
 }
