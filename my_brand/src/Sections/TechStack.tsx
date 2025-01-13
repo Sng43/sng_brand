@@ -88,8 +88,8 @@ const TechStack = () => {
   return (
     <section className="translate-y-[-120px] sm:translate-y-[-130px] lg:translate-y-[-130px] xl:translate-y-[-110px]">
         <div className=" relative top-32 flex justify-between z-50">
-        <div className="lg:h-36 w-[580px] bg-[linear-gradient(to_right,black,transparent)]"></div>
-        <div className="h-36 w-[580px] bg-[linear-gradient(to_left,black,transparent)]"></div>
+        <div className="h-36  w-24 sm:w-[580px] bg-[linear-gradient(to_right,black,transparent)]"></div>
+        <div className="h-36 w-24 sm:w-[580px] bg-[linear-gradient(to_left,black,transparent)]"></div>
         </div>
     <div className={twMerge("max-w-full select-none overflow-hidden")}>
       <div
