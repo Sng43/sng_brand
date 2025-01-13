@@ -86,7 +86,7 @@ const TechStack = () => {
   );
 
   return (
-    <section className="translate-y-[-120px] sm:translate-y-[-130px] lg:translate-y-[-130px] xl:translate-y-[-110px]">
+    <section className="translate-y-[-120px] sm:translate-y-[-130px] lg:translate-y-[-130px] xl:translate-y-[-100px]">
         <div className=" relative top-32 flex justify-between z-50">
         <div className="h-36  w-24 sm:w-[580px] bg-[linear-gradient(to_right,black,transparent)]"></div>
         <div className="h-36 w-24 sm:w-[580px] bg-[linear-gradient(to_left,black,transparent)]"></div>
