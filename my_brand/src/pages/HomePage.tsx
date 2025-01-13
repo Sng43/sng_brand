@@ -4,6 +4,7 @@ import Contact from '../Sections/Contact';
 import Footer from '../Sections/Footer';
 import Hero from '../Sections/Hero';
 import Services from '../Sections/Services';
+import TechStack from '../Sections/TechStack'
 import Work from '../Sections/Work';
 import ReactLenis from 'lenis/react';
 
@@ -14,6 +15,7 @@ const HomePage = () => {
         <Header/>
         <div id='home'>
         <Hero />
+        <TechStack/>
         </div>
         <div id='services'>
         <Services/>

@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'fade-gradient': 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
+      },
       colors: {
         dark: {
           700: "#333333",
