@@ -1,44 +1,64 @@
 import Logo from "../components/Logo";
 
+const SITEMAP = [
+    { name: 'Home', link: '#home' },
+    { name: 'Services', link: '#services' },
+    { name: 'Works', link: '#works' },
+    { name: 'About', link: '#about' },
+    { name: 'Contacts', link: '#contact' },
+]
+
 const Footer = () => {
     return (
-        <footer className="bg-gray-100 text-black lg:h-64 border-black">
-            <div className="sm:w-[90%] w-[94%] m-auto">
-                <div className="lg:flex justify-between">
-                <div className="my-2 border border-gray-100 lg:w-[31%]">
-                    <h4 className="font-oxanium font-bold text-[10px] tracking-wider text-gray-500 my-2 lg:mb-8">SERVICES</h4>
-                    <div className="font-antic font-[1000] leading-5 lg:leading-8 lg:tracking-widest lg:text-xl">
-                        <h2>WEB DESIGN</h2>
-                        <h2>FRONT-END DEVELOPMENT</h2>
-                        <h2>BACK-END DEVELOPMENT</h2>
+        <footer className="bg-gray-100 text-black">
+            <div className="sm:w-[90%] w-[94%] m-auto pt-12 pb-8">
+                <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <div>
+                        <h4 className="font-oxanium font-bold text-[11px] tracking-[0.3em] text-gray-500 mb-6">SERVICES</h4>
+                        <div className="font-antic leading-8 lg:tracking-widest text-lg lg:text-xl">
+                            <h2>WEB DESIGN</h2>
+                            <h2>FRONT-END DEVELOPMENT</h2>
+                            <h2>BACK-END DEVELOPMENT</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 className="font-oxanium font-bold text-[11px] tracking-[0.3em] text-gray-500 mb-6">SIGN UP FOR THE NEWSLETTER</h4>
+                        <form className="font-oxanium text-sm tracking-wider" action="">
+                            <label htmlFor="email" className="block border-b border-dashed border-black transition-colors duration-300 focus-within:border-solid">
+                                <input
+                                    id="email"
+                                    className="w-full bg-transparent p-2 pl-0 text-black placeholder:text-gray-500 focus:outline-none"
+                                    type="email"
+                                    placeholder="Enter your email address"
+                                />
+                            </label>
+                        </form>
+                    </div>
+                    <div>
+                        <h4 className="font-oxanium font-bold text-[11px] tracking-[0.3em] text-gray-500 mb-6">SITEMAP</h4>
+                        <ul className="space-y-3">
+                            {SITEMAP.map((item) => (
+                                <li key={item.name}>
+                                    <a href={item.link} className="link-sweep font-oxanium font-semibold text-sm tracking-wider transition-opacity duration-300 hover:opacity-60">
+                                        {item.name}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
-                <div className="my-2 border border-gray-100 lg:w-[31%] lg:h-[0.1px] xl:mr-20">
-                    <h4 className="font-oxanium font-bold text-[10px] tracking-wider text-gray-500 mt-2 mb-1 lg:mb-8">SIGN UP FOR THE NEWSLETTER</h4>
-                    <form className="font-oxanium font-extrabold text-[13px] tracking-wider " action="">
-                        <label htmlFor="email">
-                            <input className="bg-gray-100 border border-gray-100 border-dashed border-b-black p-2 w-[100%] text-black focus:outline-none" type="email" placeholder="Enter your email address"/>
-                        </label>
-                    </form>
-                    <p className="font-oxanium text-[6px] mt-6 lg:mt-[130px] text-black tracking-[0.15rem]">WEBSITE  BY  SENGA EMMANUEL KABARE</p>
-                </div>
-                <div className="border border-gray-100 lg:w-[31%]">
-                    <h4 className="font-oxanium font-bold text-[10px] tracking-wider text-gray-500 my-2 lg:mt-4 lg:mb-8">SITEMAP</h4>
-                    <p className="font-oxanium font-extrabold text-black text-[10px] border border-gray-100 border-dashed border-b-black my-1">Home</p>
-                    <p className="font-oxanium font-extrabold text-black text-[10px] border border-gray-100 border-dashed border-b-black my-1">Services</p>
-                    <p className="font-oxanium font-extrabold text-black text-[10px] border border-gray-100 border-dashed border-b-black my-1">Works</p>
-                    <p className="font-oxanium font-extrabold text-black text-[10px] border border-gray-100 border-dashed border-b-black my-1">About</p>
-                    <p className="font-oxanium font-extrabold text-black text-[10px] border border-gray-100 border-dashed border-b-black my-1">Contacts</p>
+
+                <div className="mt-14 flex flex-col items-center gap-4 border-t border-black/10 pt-8 sm:flex-row sm:justify-between">
+                    <div className="flex items-center gap-4">
+                        <div className="h-12 w-12">
+                            <Logo />
+                        </div>
+                        <p className="font-oxanium text-xl">{new Date().getFullYear()}</p>
+                    </div>
+                    <p className="font-oxanium text-[10px] tracking-[0.25em] text-gray-600">WEBSITE BY SENGA EMMANUEL KABARE</p>
+                    <p className="font-oxanium text-[10px] tracking-[0.25em]">SNG EMMY ALL RIGHTS RESERVED</p>
                 </div>
             </div>
-            <div className="m-auto w-[80%] lg:w-48 lg:h-2 lg:ml-0 text-center lg:relative bottom-4">
-                <h1 className="font-oxanium text-xl relative top-5 lg:top-2" >2024</h1>
-                <div className=" h-40 w-40 m-auto lg:h-12 lg:w-16">
-                    <Logo />
-                </div>
-                <p className="font-oxanium text-[6px] text-black my-4 lg:mt-0 tracking-[0.15rem]">SNG EMMY ALL RIGHTS RESERVED</p>
-            </div>
-                </div>
         </footer>
     );
 }

@@ -4,7 +4,8 @@ function App() {
 
   return (
     <div className="bg-black text-white">
-    <HomePage/>
+      <div className="noise-overlay" aria-hidden="true" />
+      <HomePage/>
     </div>
   )
 }

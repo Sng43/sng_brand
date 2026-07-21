@@ -4,34 +4,122 @@
 
 
 @font-face {
-    font-family: Blacksmoke ;
+    font-family: Blacksmoke;
     src: url('/src/assets/Fonts/Blacksmoke/Blacksmoke.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: Carnage;
     src: url('/src/assets/Fonts/carnage/Carnage.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: Gematype;
     src: url('/src/assets/Fonts/Gematype-Font/Gematype.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: Oxanium;
-    src: url('/src/assets/Fonts/Oxanium/static/Oxanium-Light.ttf');
+    src: url('/src/assets/Fonts/Oxanium/Oxanium-VariableFont_wght.ttf');
+    font-weight: 200 800;
+    font-display: swap;
 }
 @font-face {
     font-family: OxaniumThin;
     src: url('/src/assets/Fonts/Oxanium/static/Oxanium-ExtraLight.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: Antic;
     src: url('/src/assets/Fonts/Antic/Antic-Regular.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: Averia;
     src: url('/src/assets/Fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf');
+    font-display: swap;
+}
+
+@layer base {
+    html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        @apply bg-black text-white;
+        overflow-x: clip;
+    }
+
+    ::selection {
+        background: #fff;
+        color: #000;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #000;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+@layer utilities {
+    /* Film-grain texture laid over the whole page */
+    .noise-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        pointer-events: none;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Underline that sweeps in from the left on hover */
+    .link-sweep {
+        position: relative;
+    }
+    .link-sweep::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        height: 1px;
+        width: 100%;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .link-sweep:hover::after,
+    .group:hover .link-sweep::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    /* Soft fade masks on the marquee edges */
+    .marquee-mask {
+        mask-image: linear-gradient(to right, transparent, black 18%, black 82%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 18%, black 82%, transparent);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
 }
